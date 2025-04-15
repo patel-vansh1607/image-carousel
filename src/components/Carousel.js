@@ -10,6 +10,16 @@ const images = [
 
 
 const ImageCarousel = () =>{
+
+    const [index, setIndex] = useState(0);
+
+    const prevSlide = () => {
+      setIndex((index - 1 + images.length) % images.length);
+    };
+  
+    const nextSlide = () => {
+      setIndex((index + 1) % images.length);
+    };
     return(
         <div className="main-div">
 
